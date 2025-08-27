@@ -1,3 +1,5 @@
+#Write a program that takes the prompts for three integer numbers and prints their sum.
+
 #First Number: 2
 #Second Number: 3
 #Third Number: 4
