@@ -5,3 +5,5 @@
 #Enter Number: 179
 #The next number for the number 179 is 180.
 #The previous number for the number 179 is 178.
+
+print(type ('a'))
