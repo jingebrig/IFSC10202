@@ -14,22 +14,22 @@ seconds_day = 86400
 seconds_hour = 3600
 seconds_minute = 60
 
-seconds = int(input("Enter Length of Time in Seconds: "))  # Input statement with a prompt  
+numberofseconds = int(input("Enter Length of Time in Seconds: "))  # Input statement with a prompt  
 
-years = seconds // seconds_year
-seconds = seconds - (years * seconds_year)
+years = numberofseconds // seconds_year
+numberofseconds = numberofseconds - (years * seconds_year)
 
-days = seconds // seconds_day
-seconds = seconds - (days * seconds_day)
+days = numberofseconds // seconds_day
+numberofseconds = numberofseconds - (days * seconds_day)
 
-hours = seconds // seconds_hour
-seconds = seconds - (hours * seconds_hour)
+hours = numberofseconds // seconds_hour
+numberofseconds = numberofseconds - (hours * seconds_hour)
 
-minutes = seconds // seconds_minute
-seconds = seconds - (minutes * seconds_minute)
+minutes = numberofseconds // seconds_minute
+numberofseconds = numberofseconds - (minutes * seconds_minute)
 
 print("Years:",years)
 print("Days:",days)
 print("Hours:",hours)
 print("Minutes:",minutes)
-print("Seconds:",seconds)
+print("Seconds:",numberofseconds)
