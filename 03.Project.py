@@ -1,8 +1,15 @@
-#Enter First Number: 3.2
-#Enter Operator (+,-.*,/): +
-#Enter Second Number: 6.3
-#3.2 + 6.3 = 9.5
+x = float(input("Enter First Number: "))
+op = (input("Enter Operator (+,-,*,/): "))
+y = float(input("Enter Second Number: "))
+if "+" in op:
+    output = x + y
+elif "-" in op:
+    output = x - y
+elif "*" in op:
+    output = x * y
+elif "/" in op:
+    output = x / y
+else:
+    print("Invalid Operator")
 
-num1 = float(input("Enter First Number: "))
-operator = float(input("Enter Operator (+,-,*,/): "))
-num2 = float(input("Enter Second Number: "))
+print(x,op,y,"=",output)
