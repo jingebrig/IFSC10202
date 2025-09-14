@@ -5,11 +5,11 @@
 #Third Number: 4
 #9
 
-x=input("Enter first number: ")
-y=input("Enter second number: ")
-z=input("Enter third number: ")
+x=int(input("Enter first number: "))
+y=int(input("Enter second number: "))
+z=int(input("Enter third number: "))
 #a=int(x)
 #b=int(y)
 #c=int(z)
 #sum = a + b + c
-print(int(x) + int(y) + int(z))
+print(x + y + z)
