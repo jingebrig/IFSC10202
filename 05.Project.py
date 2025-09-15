@@ -10,12 +10,6 @@
 # Do not use the len function to determine the number of digits.
 
 
-
-
-
-
-
-
 start = int(input("Enter Start of Range: "))
 end = int(input("Enter End of Range: "))
 
