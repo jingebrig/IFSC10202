@@ -1,8 +1,8 @@
 #Prompt for a sequence of numbers, the last number being a carriage return.
-#Print the sum of the numbers.
+#Print the number of even values.
 
+#Enter a Number (CR to quit): 2
 #Enter a Number (CR to quit): 1
-#Enter a Number (CR to quit): 7
-#Enter a Number (CR to quit): 9
+#Enter a Number (CR to quit): 4
 #Enter a Number (CR to quit): 
-#Sum: 17
+#Number of Even Values: 2
