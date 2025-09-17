@@ -12,5 +12,18 @@
 
 start = int(input("Enter Start of Range: "))
 end = int(input("Enter End of Range: "))
+length = 0        # use of the while loop to determine the number of digits of an integer
+while start > 0:
+    start //= 10  # this is equivalent to n = n // 10
+    length += 1
+    
+    exp = length  # exp = exponent
+    spec_num = digit**exp + digit**exp =
 
-for num in range(start, end):
+
+
+#for num in range(start, end):
+
+
+#Here is another example  n:
+
