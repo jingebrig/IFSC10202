@@ -12,27 +12,16 @@
 
 start = int(input("Enter Start of Range: "))
 end = int(input("Enter End of Range: "))
-length = 0
-for num in range (start, end+1):
-    #order = len(str(num)) 
+sum = 0
+for num in range (start, end+1): 
     while num > 0:
-        num //= 10  # this is equivalent to n = n // 10
+        length = 0
+        num //= 10
         length += 1
-        
-    
-    
-    sum = 0
-
     temp = num
     while temp > 0:
         digit = temp % 10
         sum += digit ** length
-        temp //= 10
-
+        temp //= 10    
     if num == sum:
         print(num)
-
-
-
-
-
