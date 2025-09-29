@@ -1,0 +1,1 @@
+words = number of spaces + 1
