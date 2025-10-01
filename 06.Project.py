@@ -10,24 +10,26 @@ mergefile = open(mergefilename,'r')
 outputfile = open(outputfilename, 'w')
 
 line = inputfile.readline()
+
 while line != "":
-	outputfile.write(line)
-	inputrecordcount += 1
-	outputrecordcount += 1
-	line = inputfile.readline()
-
-if line== str("**Insert Merge File Here**"):
-	outputfile.write(line)
-	mergerecordcount += 1
-	outputrecordcount += 1
-	line = mergefile.readline()
-
+	if line == "**Insert Merge File Here**\n":
+		line = mergefile.readline()
+		while line != "":
+			outputfile.write(line)
+			mergerecordcount += 1
+			outputrecordcount += 1
+			line = mergefile.readline()
+		outputfile.write("\n")
+		line = inputfile.readline()
+	else:
+		outputfile.write(line)
+		inputrecordcount += 1
+		outputrecordcount += 1
+		line = inputfile.readline()
 inputfile.close()
 mergefile.close()
 outputfile.close()
 
-print("{} input records written".format(inputrecordcount))
-print("{} merge records written".format(mergerecordcount))
-print("{} output records written".format(outputrecordcount))
-
-
+print("{} input file records".format(inputrecordcount))
+print("{} merge file records".format(mergerecordcount))
+print("{} output file records".format(outputrecordcount))
