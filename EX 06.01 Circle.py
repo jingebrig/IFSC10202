@@ -16,7 +16,7 @@ x = float(radiusfile.readline())
 
 
 while x != "":
-    print(f"{x:>15s}{"        "}{diameter(x):.5f}{"       "}{circumference(x):.5f}{"        "}{area(x):.5f}")
+    print(f"{x:.5f}{"        "}{diameter(x):.5f}{"       "}{circumference(x):.5f}{"        "}{area(x):.5f}")
     
     x = float(radiusfile.readline())
 radiusfile.close()

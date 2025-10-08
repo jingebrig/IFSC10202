@@ -1,38 +1,26 @@
-# Create a program that displays special numbers in a range. A special number is defined to be number
-# that is the sum of its own digits each raised to the power of the number of digits.
-# 153 is 3 digits long and is equal to 1^3 + 5^3 + 3^3
-# 8208 is 4 digits long and is equal to 8^4 + 2^4 + 0^4 + 8^4
-# 
-# Hint: First determine the number of digits using a while loop and reminder division by 10. 
-# Do not use any string functions or the len function.
-# 
-# Hint: Recalculate the value using the power from above and see if you get the original value
-# Do not use the len function to determine the number of digits.
+def count_digits(num):
+    count = 0
+    temp = num
+    while temp > 0:
+        count += 1
+        temp = temp // 10
+    return count if count != 0 else 1
 
+def special_num(num):
+    num_digits = count_digits(num)
+    temp = num
+    total = 0
+    while temp > 0:
+        digit = temp % 10
+        total += digit ** num_digits
+        temp = temp // 10
+    return total == num
 
 start = int(input("Enter Start of Range: "))
 end = int(input("Enter End of Range: "))
-length = 0
-for num in range (start, end+1):
-    #order = len(str(num)) 
-    while num > 0:
-        num //= 10  # this is equivalent to n = n // 10
-        length += 1
-        
-    
-    
-    sum = 0
 
-    temp = num
-    while temp > 0:
-        digit = temp % 10
-        sum += digit ** length
-        temp //= 10
+print(f"Special numbers from {start} to {end}:")
 
-    if num == sum:
-        print(num)
-
-
-
-
-
+for number in range(start, end + 1):
+    if special_num(number):
+        print(number)
