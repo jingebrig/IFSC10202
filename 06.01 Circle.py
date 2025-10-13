@@ -12,11 +12,17 @@ def area(x):
 print(f'{"Radius":>15s}{"Diameter":>15s}{"Circumference":>15s}{"Area":>15s}')
 
 radiusfile = open("06.01 Radius.txt", "r")
-x = float(radiusfile.readline())
+line = radiusfile.readline()
 
+while line != "":
+    line = line.strip()  # remove newline
+    if line == "":
+        line = radiusfile.readline()
+        continue
 
-while x != "":
-    print(f"{x:.5f}{"        "}{diameter(x):.5f}{"       "}{circumference(x):.5f}{"        "}{area(x):.5f}")
-    
-    x = float(radiusfile.readline())
+    x = float(line)
+    print(f"{x:15.5f}{diameter(x):15.5f}{circumference(x):15.5f}{area(x):15.5f}")
+
+    line = radiusfile.readline()
+
 radiusfile.close()
