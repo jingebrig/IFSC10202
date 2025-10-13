@@ -14,3 +14,15 @@
 #Enter Classroom B: 21
 #Enter Classroom C: 20
 #31
+
+a = int(input("Enter Classroom A: "))
+b = int(input("Enter Classroom B: "))
+c = int(input("Enter Classroom C: "))
+
+desks_a = (a // 2) + (a % 2)
+desks_b = (b // 2) + (b % 2)
+desks_c = (c // 2) + (c % 2)
+
+total_desks = desks_a + desks_b + desks_c
+
+print(total_desks)

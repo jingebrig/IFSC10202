@@ -8,18 +8,6 @@
 #8
 #2
 
-#read the number of students
-#N = int(input("Number of Students: "))
-#read the number of apples
-#K = int(input("Number of Apples: "))
-#use floor division to calculate apples per student
-#applesperstudent = K // N
-#use modulo division to calculate remaining apples
-#remainingapples = K % N
-#print the results
-#print (applesperstudent)
-#print (remainingapples)
-
 n=int(input("Number of Students: "))
 k=int(input("Number of Apples: "))
 applesperstudent = k // n
