@@ -24,3 +24,25 @@
 
 #Enter Fibonnaci Sequence Number: 10
 #Fibonacci Number: 55
+
+# Prompt for Fibonacci sequence number
+n = int(input("Enter Fibonacci Sequence Number: "))
+
+# Handle the first two Fibonacci numbers directly
+if n == 0:
+    fib = 0
+elif n == 1:
+    fib = 1
+else:
+    # Initialize the first two numbers
+    a = 0
+    b = 1
+
+    # Loop to calculate the nth Fibonacci number
+    for i in range(2, n + 1):
+        fib = a + b
+        a = b
+        b = fib
+
+# Print the result
+print("Fibonacci Number:", fib)

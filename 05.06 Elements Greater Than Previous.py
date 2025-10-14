@@ -11,3 +11,24 @@
  
 #Enter a Number (CR): 
 #Sequence Length is 0
+
+# Initialize counters
+count_greater = 0
+previous = None
+
+# Prompt for numbers until a blank line
+while True:
+    user_input = input("Enter a Number (CR to quit): ")
+    if user_input == "":   # stop when Enter is pressed on a blank line
+        break
+
+    num = int(user_input)
+
+    # Compare with previous number (skip first number)
+    if previous is not None and num > previous:
+        count_greater += 1
+
+    previous = num  # update previous number
+
+# Print the result
+print("Number of Values Greater Than the Previous:", count_greater)
