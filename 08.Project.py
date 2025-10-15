@@ -2,7 +2,6 @@ filename = "constitution.txt"
 file = open(filename, "r")
 
 text = file.readlines()
-file.close()
 
 for i in range(len(text)):
     text[i] = text[i].rstrip("\n")
@@ -13,14 +12,11 @@ while True:
         break
 
     line_number = 0
-    found_section = False
 
     while line_number < len(text):
         line = text[line_number]
 
         if search.lower() in line.lower():
-            found_section = True
-
             start = line_number
             while start > 0 and text[start - 1].strip() != "":
                 start -= 1
@@ -36,3 +32,4 @@ while True:
             line_number = end
         else:
             line_number += 1
+file.close()

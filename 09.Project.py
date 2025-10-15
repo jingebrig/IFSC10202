@@ -15,9 +15,9 @@ while line != "":
 file.close()
 
 # ---- Print the 2D list neatly ----
-for r in range(len(table)):
-    for c in range(len(table[r])):
-        print(f"{table[r][c]:>10}", end=" ")
+for i in range(len(table)):
+    for j in range(len(table[i])):
+        print(f"{table[i][j]:>10}", end=" ")
     print()
 
 # ---- Prompt for cities ----
@@ -26,16 +26,16 @@ to_city = input("Enter To City: ")
 
 # ---- Search for From City in first column ----
 from_index = -1
-for r in range(1, len(table)):       # start at 1 (skip header)
-    if table[r][0].lower() == from_city.lower():
-        from_index = r
+for i in range(1, len(table)):       # start at 1 (skip header)
+    if table[i][0].lower() == from_city.lower():
+        from_index = i
         break
 
 # ---- Search for To City in first row ----
 to_index = -1
-for c in range(1, len(table[0])):    # start at 1 (skip header)
-    if table[0][c].lower() == to_city.lower():
-        to_index = c
+for j in range(1, len(table[0])):    # start at 1 (skip header)
+    if table[0][j].lower() == to_city.lower():
+        to_index = j
         break
 
 # ---- Output ----
