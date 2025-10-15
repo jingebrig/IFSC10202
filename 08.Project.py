@@ -2,6 +2,7 @@ filename = "constitution.txt"
 file = open(filename, "r")
 
 text = file.readlines()
+file.close()
 
 for i in range(len(text)):
     text[i] = text[i].rstrip("\n")
@@ -32,4 +33,3 @@ while True:
             line_number = end
         else:
             line_number += 1
-file.close()
