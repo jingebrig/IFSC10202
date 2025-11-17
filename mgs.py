@@ -8,6 +8,11 @@ data = []
 # Read and split each line by '-'
 with open(input_file, "r", encoding="utf-8") as file:
     for line in file:
+        # Strip whitespace and skip empty lines
+        clean_line = line.strip()
+        if not clean_line:
+            continue
+
         parts = [item.strip() for item in line.strip().split("-")]
         data.append(parts)
 
